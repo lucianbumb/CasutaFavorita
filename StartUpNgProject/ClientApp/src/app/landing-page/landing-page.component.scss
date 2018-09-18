@@ -1,0 +1,78 @@
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+.container {
+  display: grid;
+  padding: 1vmin;
+  background-image: url('/assets/lp.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+
+  @include desktop {
+    box-sizing: border-box;
+    height: -moz-calc(100% - 64px);
+    height: -webkit-calc(100% - 64px);
+    height: calc(100% - 64px);
+
+  }
+}
+
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+.icons {
+  h3 {
+    color: deeppink;
+    font-family: 'Handlee', cursive;
+    margin-bottom: 2vmin;
+  }
+
+  margin: auto;
+  padding-bottom: 3vmin;
+
+  @include desktop {
+    margin: initial;
+    padding: 3vmin;
+
+    h3 {
+      font-size: 5vmin;
+      max-width: 40vmin;
+
+      text-align: center;
+      color: deeppink;
+      margin-top: 5vmin;
+      margin-bottom: 1vmin;
+      font-family: 'Handlee', cursive;
+    }
+  }
+}
+
+.rezervare {
+  display: none;
+
+  @include desktop {
+    background-color: transparent;
+    display: block;
+    padding: 4vmin;
+  }
+}
+
+.rezervare-mobil {
+  background-color: #fff;
+  color: deeppink;
+
+  @include desktop {
+    display: none;
+  }
+}

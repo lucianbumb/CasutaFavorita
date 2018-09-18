@@ -1,0 +1,85 @@
+$tablet: 840px;
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+
+section {
+
+  background-color: white;
+  padding-top: 3vmin;
+
+  @include tablet {
+    height: 100vh;
+    padding-top: 10vmin;
+    box-sizing: border-box;
+  }
+}
+
+
+
+.about {
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 4vmin;
+
+  .title {
+    text-align: center;
+    margin: 0 auto;
+    color: deeppink;
+  }
+
+  .cards {
+    display: grid;
+    grid-gap: 1vmin;
+    padding-left: 1vmin;
+    padding-right: 1vmin;
+    position: relative;
+    box-sizing: border-box;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .card {
+    display: grid;
+    position: relative;
+    box-sizing: border-box;
+
+    @include tablet {
+      box-shadow: 0 1px 1px 0 #ccc;
+    }
+
+    p {
+      margin: 0 auto;
+      padding: 2vmin;
+      font-size: 0.7rem;
+      opacity: 0.8;
+    }
+
+    img {
+      width: 100%;
+      margin: 2vmin auto 0 auto;
+      position: relative;
+      max-width: 300px;
+    }
+  }
+}
+
+
+.description,
+.summary {
+  padding: 2vmin;
+  color: deeppink;
+  font-style: italic;
+  opacity: 0.7;
+
+  @include tablet {
+    width: 50vw;
+    margin: auto;
+  }
+}

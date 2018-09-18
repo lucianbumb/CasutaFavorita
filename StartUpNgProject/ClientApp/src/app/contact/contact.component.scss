@@ -1,0 +1,84 @@
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+$primary:white;
+$secondary:deeppink;
+$titleColor:white;
+$textColor:deeppink;
+
+section {
+  background-color: $primary;
+  color: $textColor;
+  padding: 2vmin;
+  display: grid;
+  grid-template-rows: 20vh auto;
+
+  @include desktop {
+    height: 100vh;
+  }
+}
+
+h2 {
+  margin: auto;
+}
+
+.content {
+  display: grid;
+  position: relative;
+
+  @include desktop {}
+}
+
+.map {
+  flex: 1;
+  display: flex;
+  position: relative;
+  min-height: 300px;
+  margin-bottom: 5vmin;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.info {
+  display: grid;
+  grid-gap: 2vmin;
+  margin: auto;
+  padding: 4vmin;
+  background-color: $secondary;
+  color: white;
+
+  @include desktop {
+    position: absolute;
+    top: 4vmin;
+    right: 4vmin;
+    opacity: 0.8;
+    border-radius: 20px;
+  }
+}
+
+.pc {
+  display: flex;
+
+  span {
+    background-color: $primary;
+    display: block;
+
+    padding: 0.5rem;
+    font-family: Courier;
+    font-weight: bold;
+    border-radius: 50%;
+    margin: 1vmin;
+    color: $textColor;
+  }
+}

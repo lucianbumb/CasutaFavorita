@@ -1,0 +1,45 @@
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+.playground {
+  display: grid;
+  grid-gap: 4vmin;
+  padding: 4vmin;
+  margin: auto;
+  width: 80vmin;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1vmin;
+  padding: 1vmin;
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1vmin;
+    padding: 1vmin;
+    width: 38vmin;
+  }
+}
+
+svg {
+  background-color: deeppink;
+  height: 20vmin;
+  width: 20vmin;
+  padding: 2vmin;
+  opacity: 0.6;
+  box-sizing: border-box;
+
+  path,
+  circle,
+  rect {
+    fill: white;
+  }
+
+  @include desktop {
+    height: 10vmin;
+    width: 10vmin;
+  }
+}

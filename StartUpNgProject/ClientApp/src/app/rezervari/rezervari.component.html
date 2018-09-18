@@ -1,0 +1,24 @@
+<div class="form">
+  <form [formGroup]='formGroup' (ngSubmit)='onSubmit()'>
+    <h2>Rezervari</h2>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Selecteaza data" formControlName="date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Nume & Prenume" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Telefon" formControlName="phone">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput placeholder="Mesaj" formControlName="message"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent">Rezervare</button>
+  </form>
+</div>

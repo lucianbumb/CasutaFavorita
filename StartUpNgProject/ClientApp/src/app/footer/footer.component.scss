@@ -1,0 +1,88 @@
+$tablet: 840px;
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+section {
+  background-color: deeppink;
+  color: white;
+}
+
+.content {
+  display: grid;
+
+  p {
+    padding: 4vmin;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4vmin;
+    padding: 4vmin;
+    justify-content: center;
+
+    p {
+      padding: 0 5vmin;
+    }
+  }
+}
+
+.copy {
+  text-align: center;
+  padding: 2vmin;
+}
+
+
+
+.pc {
+  display: flex;
+
+  span {
+    display: block;
+    background-color: whitesmoke;
+    color: deeppink;
+    padding: 0.5rem;
+    font-family: Courier;
+    font-weight: bold;
+    border-radius: 50%;
+    margin: 1vmin;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  input {
+    padding: 10px;
+    min-width: 300px;
+    margin-bottom: 3vmin;
+  }
+
+  textarea {
+    padding: 10px;
+    min-width: 300px;
+    flex: 1;
+    margin-bottom: 3vmin;
+  }
+
+  button {
+    border: none;
+    min-width: 200px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: white;
+    color: deeppink;
+  }
+}
+
+.info {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,31 @@
+$tablet: 840px;
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+.form {
+  width: 300px;
+  position: relative;
+  display: flex;
+  padding: 2vmin;
+  background-color: rgba(255, 255, 255, 0.459);
+  margin: auto;
+  border-radius: 5px;
+
+
+  form {
+    display: grid;
+    margin: auto;
+    width: 100%;
+    opacity: 1;
+  }
+
+  @include tablet {
+    .form {
+      margin: auto;
+    }
+  }
+}

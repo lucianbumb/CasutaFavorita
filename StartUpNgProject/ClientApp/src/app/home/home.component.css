@@ -1,0 +1,29 @@
+.sidenav-container {
+  height: 100%;
+  background-color: white;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.menu-horizontal {
+  display: flex;
+}
+
+.menu-horizontal>a {
+  color: white;
+}
+
+.logo-title {
+  width: 250px;
+}
