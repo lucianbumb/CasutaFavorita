@@ -33,6 +33,9 @@ section {
 .copy {
   text-align: center;
   padding: 2vmin;
+  width: 100%;
+  background-color: #303030;
+  color: white;
 }
 
 
@@ -56,6 +59,7 @@ section {
   display: flex;
   flex-direction: column;
   position: relative;
+  padding: 5vmin;
 
   input {
     padding: 10px;
@@ -66,6 +70,7 @@ section {
   textarea {
     padding: 10px;
     min-width: 300px;
+    min-height: 200px;
     flex: 1;
     margin-bottom: 3vmin;
   }
@@ -85,4 +90,5 @@ section {
   display: grid;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
